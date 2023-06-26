@@ -14,6 +14,7 @@
         <label for="">Archivo Fotografia</label><br><br>
         {% if foto.archivo_fotografia %}
              <p>{{ foto.archivo_fotografia.name }}</p>
+             <img src="{{ foto.archivo_fotografia.url }}" alt="Foto actual">
         {% endif %}
         <input type="file" name="archivo_fotografia"><br><br>
         <button type="submit" id="new1">Update</button>

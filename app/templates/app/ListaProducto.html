@@ -26,7 +26,9 @@
               <td>{{x.id}}</td>
               <td>{{x.nombre}}</td>
               <td>{{x.descripcion}}</td>
-              <td>{{x.archivo_fotografia}}</td>
+              <td>
+                <img src="{{x.archivo_fotografia.url}}" alt="{{x.nombre}}">
+              </td>
               <td>
                   <a href="actualizarProducto/{{x.id}}"><button id="up">Actualizar</button></a>
               </td>
