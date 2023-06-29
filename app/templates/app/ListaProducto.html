@@ -30,16 +30,21 @@
                 <img src="{{x.archivo_fotografia.url}}" alt="{{x.nombre}}">
               </td>
               <td>
+                {% if user.is_superuser %}
                   <a href="actualizarProducto/{{x.id}}"><button id="up">Actualizar</button></a>
+                
               </td>
               <td>
                 <a href="eliminar/{{x.id}}"><button id="del">Eliminar</button></a>
+                {% endif %}
             </td>
           </tr>
          {% endfor %}
     </table>
     <br><br>
+    {% if user.is_superuser %}
     <a href="{% url 'agregarProducto' %}"><button id="new3">Agregar Fotografia</button></a>
+    {% endif %}
 </div>
 <div class="row 12">
     <img src="{%static 'app/imgs/periodistas.jpg' %}">
